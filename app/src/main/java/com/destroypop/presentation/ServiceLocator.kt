@@ -1,0 +1,3 @@
+package com.destroypop.presentation
+
+interface ServiceLocator

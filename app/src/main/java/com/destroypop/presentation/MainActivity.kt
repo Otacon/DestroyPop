@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.airbnb.mvrx.BaseMvRxActivity
 import com.destroypop.R
 
-class MainActivity : BaseMvRxActivity() {
+class MainActivity : BaseMvRxActivity(), ServiceLocatorView<MainServiceLocator> {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,4 +17,8 @@ class MainActivity : BaseMvRxActivity() {
                 .commit()
         }
     }
+
+    override fun getServiceLocator(): MainServiceLocator =
+            MainServiceLocator()
+
 }
